@@ -40,8 +40,12 @@ const Hero = () => {
                 width: "fit-content",
               }}
             >
-              <Typography>Ready to enjoy iPrescribe?</Typography>
-              <Button variant="text" color="primary" endIcon={<ChevronRight />}>
+            <Box component="img" src={icons.avatars} alt="avatars icon" sx={{
+                height:{xs:'auto', md:"40px"},
+                mr:{xs:.5 , md:1}
+                }}/>
+              <Typography sx={{fontSize:{xs:'12px',md:'14px'}}}>Ready to enjoy iPrescribe?</Typography>
+              <Button sx={{fontSize:{xs:'12px',md:'14px'}}} variant="text" color="primary" endIcon={<ChevronRight />}>
                 Join Waitlist
               </Button>
             </Box>
