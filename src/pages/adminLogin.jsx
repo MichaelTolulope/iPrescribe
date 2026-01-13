@@ -13,9 +13,11 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import AuthLayout from "../components/dashboard/authLayout";
 import { images } from "../assets/index";
+import { useNavigate } from "react-router-dom";
 
 const AdminLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const {
     register,
@@ -25,6 +27,7 @@ const AdminLogin = () => {
 
   const onSubmit = (data) => {
     console.log("Login Data:", data);
+    navigate("/dashboard");
   };
 
   return (
