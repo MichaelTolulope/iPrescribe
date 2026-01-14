@@ -4,6 +4,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { images } from "../../assets/index";
 import { Box, Button, Container } from "@mui/material";
+import { Menu } from "@mui/icons-material";
 
 const navLinks = ["Home", "Features", "Contact Us"];
 
@@ -28,7 +29,7 @@ const Navbar = () => {
               sx={{
                 display: "flex",
                 alignItems: "center",
-                gap: 8,
+                gap: { xs: 2, md: 8 },
               }}
             >
               <Box
@@ -64,6 +65,9 @@ const Navbar = () => {
               >
                 Join Waitlist
               </Button>
+              <Box sx={{backgroundColor:"primary.overlay", display:{xs:'flex', md:'none'}, cursor: "pointer", borderRadius:'8px', padding:'4px'}}>
+                <Menu sx={{color:"text.primary", fontSize: "32px"}}  />
+              </Box>
             </Box>
           </Toolbar>
         </Container>
